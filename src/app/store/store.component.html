@@ -1,0 +1,199 @@
+<div class="app-shell">
+  <div class="campaign-strip">
+    <strong>MEGA SHOPPING SALE</strong>
+    <span>Up to 60% off</span>
+    <span class="dot">•</span>
+    <span>Free shipping on orders over $50</span>
+    <span class="dot">•</span>
+    <span>14 days only</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="/products/all" aria-label="Mohamad Ibrahim Store home">
+      <span class="brand-mark" aria-hidden="true">MI</span>
+      <span>
+        <strong>{{ storeName }}</strong>
+        <small>API-powered shopping with Angular SSR</small>
+      </span>
+    </a>
+
+    <label class="search-box">
+      <span class="visually-hidden">Search products</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" />
+      </svg>
+      <input
+        type="search"
+        [(ngModel)]="searchTerm"
+        placeholder="Search API products..."
+        autocomplete="off"
+      >
+      <button
+        *ngIf="searchTerm"
+        type="button"
+        class="clear-search"
+        aria-label="Clear search"
+        (click)="clearSearch()"
+      >×</button>
+    </label>
+
+    <button type="button" class="cart-button" aria-label="Shopping cart" (click)="toggleCart()">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 3h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 7H6m4 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm9 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+      </svg>
+      <span>Cart</span>
+      <span class="cart-count">{{ cartCount }}</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="hero-kicker">{{ campaignName }}</p>
+      <h1>Big savings. Fresh products. <span>Shop now.</span></h1>
+      <p>Discover electronics, fashion and jewelry from our live product API. Enjoy free shipping when your cart passes $50.</p>
+      <button type="button" (click)="selectCategory('All')">Shop Now</button>
+    </div>
+    <div class="hero-badge" aria-label="Promotion up to 60 percent off">
+      <span>UP TO</span>
+      <strong>60%</strong>
+      <span>OFF</span>
+    </div>
+  </section>
+
+  <div class="content-layout">
+    <aside class="category-panel" aria-label="Product categories">
+      <div class="panel-heading">
+        <span>Categories</span>
+        <small>{{ products.length }} API products</small>
+      </div>
+
+      <nav class="category-list">
+        <button
+          *ngFor="let category of categories"
+          type="button"
+          [class.active]="selectedCategory === category"
+          [attr.aria-current]="selectedCategory === category ? 'page' : null"
+          (click)="selectCategory(category)"
+        >
+          <span>{{ displayCategory(category) }}</span>
+          <span class="category-count">{{ categoryCount(category) }}</span>
+        </button>
+      </nav>
+
+      <div class="shipping-card">
+        <span aria-hidden="true">🚚</span>
+        <div>
+          <strong>Free shipping</strong>
+          <small>On orders over $50</small>
+        </div>
+      </div>
+
+      <div class="api-card">
+        <span class="api-dot"></span>
+        <div>
+          <strong>Live API catalogue</strong>
+          <small>fakestoreapi.com/products</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="product-area">
+      <section class="results-header">
+        <div>
+          <p class="eyebrow">Product catalogue</p>
+          <h2>{{ displayCategory(selectedCategory) }}</h2>
+          <p *ngIf="!loading && !errorMessage">
+            {{ filteredProducts.length }}
+            {{ filteredProducts.length === 1 ? 'product' : 'products' }} found
+            <span *ngIf="searchTerm"> for “{{ searchTerm }}”</span>
+          </p>
+        </div>
+        <div class="status-chip" *ngIf="searchTerm">Search active</div>
+      </section>
+
+      <section *ngIf="loading" class="loading-state" aria-live="polite">
+        <div class="spinner"></div>
+        <h3>Loading products from API...</h3>
+        <p>Fetching the latest catalogue from Fake Store API.</p>
+      </section>
+
+      <section *ngIf="errorMessage && !loading" class="empty-state error-state">
+        <div aria-hidden="true">!</div>
+        <h3>Unable to load products</h3>
+        <p>{{ errorMessage }}</p>
+        <button type="button" (click)="reloadPage()">Try again</button>
+      </section>
+
+      <section
+        *ngIf="!loading && !errorMessage && filteredProducts.length; else noResults"
+        class="product-grid"
+        aria-label="Product results"
+      >
+        <article
+          *ngFor="let product of filteredProducts; trackBy: trackByProductId"
+          class="product-card"
+        >
+          <div class="product-image-wrap">
+            <img [src]="product.image" [alt]="product.title" loading="lazy">
+            <span class="product-id">#{{ product.id }}</span>
+            <span class="stock-badge">In Stock</span>
+          </div>
+
+          <div class="product-content">
+            <span class="product-category">{{ product.category }}</span>
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.description }}</p>
+            <div class="rating" *ngIf="product.rating">
+              <span>★ {{ product.rating.rate | number:'1.1-1' }}</span>
+              <small>{{ product.rating.count }} reviews</small>
+            </div>
+            <div class="product-footer">
+              <strong>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</strong>
+              <button type="button" (click)="addToCart(product)">Add to cart</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <ng-template #noResults>
+        <section *ngIf="!loading && !errorMessage" class="empty-state">
+          <div aria-hidden="true">⌕</div>
+          <h3>No products found</h3>
+          <p>Try a different search term or select another category.</p>
+          <button type="button" (click)="clearSearch(); selectCategory('All')">Show all products</button>
+        </section>
+      </ng-template>
+
+      <p class="screen-reader-status" aria-live="polite">{{ lastAddedProduct }}</p>
+    </main>
+  </div>
+
+  <aside class="cart-drawer" [class.open]="cartOpen" aria-label="Cart summary">
+    <div class="cart-drawer-header">
+      <div>
+        <small>Your cart</small>
+        <strong>{{ cartCount }} {{ cartCount === 1 ? 'item' : 'items' }}</strong>
+      </div>
+      <button type="button" aria-label="Close cart" (click)="toggleCart()">×</button>
+    </div>
+    <div *ngIf="!cart.length" class="cart-empty">Your cart is empty.</div>
+    <div *ngFor="let item of cart; let index = index" class="cart-line">
+      <img [src]="item.image" [alt]="item.title">
+      <div>
+        <strong>{{ item.title }}</strong>
+        <span>{{ item.price | currency:'USD':'symbol':'1.2-2' }}</span>
+      </div>
+      <button type="button" (click)="removeFromCart(index)" aria-label="Remove item">Remove</button>
+    </div>
+    <div *ngIf="cart.length" class="cart-total">
+      <span>Subtotal</span>
+      <strong>{{ cartSubtotal | currency:'USD':'symbol':'1.2-2' }}</strong>
+    </div>
+  </aside>
+  <button *ngIf="cartOpen" type="button" class="drawer-backdrop" aria-label="Close cart" (click)="toggleCart()"></button>
+
+  <footer>
+    <span>© 2026 {{ storeName }}</span>
+    <span>Angular SSR + SEO + Fake Store API</span>
+  </footer>
+</div>
