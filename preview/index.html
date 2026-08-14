@@ -1,10 +1,144 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mohamad Ibrahim Store - Project 2 Preview</title><style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172335}.strip{background:#0e4498;color:#fff;text-align:center;padding:10px;font-size:13px}.strip b{color:#ffd451}.head{display:flex;gap:25px;align-items:center;padding:18px 5%;background:#fff;border-bottom:1px solid #dde5ef}.brand{font-weight:800;font-size:19px;min-width:260px}.brand small{display:block;font-weight:400;color:#78879a;font-size:11px;margin-top:4px}.search{flex:1;padding:14px 18px;border:1px solid #cbd6e4;border-radius:12px;color:#8794a5}.cart{background:#172335;color:#fff;border-radius:11px;padding:13px 18px}.hero{margin:24px 4%;padding:38px 44px;border-radius:22px;background:linear-gradient(135deg,#071b3f,#1769d8);color:#fff;display:flex;justify-content:space-between;align-items:center}.hero p{color:#dceaff}.hero h1{font-size:44px;line-height:1;margin:8px 0}.hero h1 span{color:#ffd451}.badge{border:1px solid #ffffff55;width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:14px}.badge b{font-size:52px;color:#ffd451}.layout{display:grid;grid-template-columns:220px 1fr;gap:30px;padding:10px 4% 50px}.side,.card{background:#fff;border:1px solid #dde5ef;border-radius:17px;box-shadow:0 10px 24px #1a2b440d}.side{padding:18px;height:max-content}.side button{width:100%;text-align:left;padding:11px 12px;margin:3px 0;border:0;border-radius:9px;background:transparent}.side button.on{background:#1767dd;color:#fff}.api{font-size:11px;color:#66758a;border:1px dashed #cbd7e6;padding:11px;border-radius:10px;margin-top:16px}.main h2{margin:4px 0 4px;font-size:34px}.sub{color:#77869a;font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}.card{overflow:hidden}.pic{height:190px;background:linear-gradient(150deg,#f8fafc,#edf3fb);display:grid;place-items:center;font-size:58px}.info{padding:17px}.cat{font-size:10px;color:#1767dd;text-transform:uppercase;font-weight:800}.info h3{font-size:15px;margin:7px 0}.info p{font-size:12px;color:#748398;line-height:1.45;min-height:52px}.foot{display:flex;justify-content:space-between;align-items:center}.foot button{border:0;background:#1767dd;color:#fff;padding:9px 11px;border-radius:8px;font-size:11px}@media(max-width:800px){.head{flex-wrap:wrap}.search{order:3;flex-basis:100%}.hero{margin:12px;display:block}.badge{display:none}.layout{grid-template-columns:1fr;padding:10px 12px}.grid{grid-template-columns:1fr}.side{display:none}}
-</style></head><body><div class="strip"><b>MEGA SHOPPING SALE</b> &nbsp; Up to 60% off &nbsp; • &nbsp; Free shipping on orders over $50 &nbsp; • &nbsp; 14 days only</div><div class="head"><div class="brand">Mohamad Ibrahim Store<small>API-powered shopping with Angular SSR</small></div><div class="search">🔎 Search API products...</div><div class="cart">🛒 Cart 0</div></div><section class="hero"><div><small>MOHAMAD IBRAHIM STORE MEGA SHOPPING SALE</small><h1>Big savings. Fresh products. <span>Shop now.</span></h1><p>Electronics, fashion and jewelry from the Fake Store API.</p></div><div class="badge"><div>UP TO<br><b>60%</b><br>OFF</div></div></section><div class="layout"><aside class="side"><b>Categories</b><button class="on">All Products</button><button>Electronics</button><button>Jewelery</button><button>Men's Clothing</button><button>Women's Clothing</button><div class="api">● Live API catalogue<br>fakestoreapi.com/products</div></aside><main class="main"><small style="color:#1767dd;font-weight:800">PRODUCT CATALOGUE</small><h2>All Products</h2><div class="sub">20 API products found</div><div class="grid">
-<div class="card"><div class="pic">🎒</div><div class="info"><div class="cat">Men's clothing</div><h3>Fjallraven Backpack</h3><p>Durable everyday backpack with multiple pockets and comfortable straps.</p><div class="foot"><b>$109.95</b><button>Add to cart</button></div></div></div>
-<div class="card"><div class="pic">👕</div><div class="info"><div class="cat">Men's clothing</div><h3>Premium Cotton T-Shirt</h3><p>Soft casual shirt designed for everyday comfort and easy styling.</p><div class="foot"><b>$22.30</b><button>Add to cart</button></div></div></div>
-<div class="card"><div class="pic">💍</div><div class="info"><div class="cat">Jewelery</div><h3>Classic Gold Bracelet</h3><p>Elegant jewelry piece with a clean finish and timeless design.</p><div class="foot"><b>$168.00</b><button>Add to cart</button></div></div></div>
-<div class="card"><div class="pic">💻</div><div class="info"><div class="cat">Electronics</div><h3>Portable SSD</h3><p>Fast compact storage for work, study and everyday file backups.</p><div class="foot"><b>$64.00</b><button>Add to cart</button></div></div></div>
-<div class="card"><div class="pic">🖥️</div><div class="info"><div class="cat">Electronics</div><h3>Gaming Monitor</h3><p>High-resolution display with sharp detail for work and entertainment.</p><div class="foot"><b>$599.00</b><button>Add to cart</button></div></div></div>
-<div class="card"><div class="pic">👗</div><div class="info"><div class="cat">Women's clothing</div><h3>Women's Casual Jacket</h3><p>Lightweight fashion layer designed for versatile everyday outfits.</p><div class="foot"><b>$55.99</b><button>Add to cart</button></div></div></div>
-</div></main></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohamad Ibrahim Store | Mega Shopping Sale</title>
+  <meta name="description" content="Shop electronics, fashion and jewelry at Mohamad Ibrahim Store. Mega Shopping Sale: up to 60% off and free shipping on orders over $50.">
+  <meta name="keywords" content="online shopping, electronics deals, fashion sale, jewelry deals, mega shopping sale, free shipping">
+  <style>
+    *{box-sizing:border-box}
+    :root{--blue:#1767dd;--navy:#10233f;--bg:#f4f7fb;--line:#dce5f0;--muted:#728198;--gold:#ffd451}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#172335}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    .strip{background:#0e4498;color:#fff;text-align:center;padding:10px 14px;font-size:13px}.strip b{color:var(--gold)}
+    .head{display:flex;gap:25px;align-items:center;padding:18px 5%;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;min-width:260px;background:none;border:0;text-align:left;color:inherit;padding:0}
+    .brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--blue);color:#fff;font-size:15px}
+    .brand small{display:block;font-weight:400;color:#78879a;font-size:11px;margin-top:4px}
+    .search-wrap{position:relative;flex:1}
+    .search{width:100%;padding:14px 46px 14px 18px;border:1px solid #cbd6e4;border-radius:12px;color:#344257;background:#fff;outline:none}
+    .search:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1767dd18}
+    .clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;font-size:22px;color:#6b7890;display:none}
+    .cart{border:0;background:#172335;color:#fff;border-radius:11px;padding:13px 18px;display:flex;gap:8px;align-items:center}
+    .hero{margin:24px 4%;padding:38px 44px;border-radius:22px;background:linear-gradient(135deg,#071b3f,#1769d8);color:#fff;display:flex;justify-content:space-between;align-items:center}
+    .hero p{color:#dceaff}.hero h1{font-size:44px;line-height:1;margin:8px 0}.hero h1 span{color:var(--gold)}
+    .shop-now{border:0;background:var(--gold);color:#10233f;padding:12px 18px;border-radius:10px;font-weight:800;margin-top:8px}
+    .badge{border:1px solid #ffffff55;width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:14px}.badge b{font-size:52px;color:var(--gold)}
+    .layout{display:grid;grid-template-columns:220px 1fr;gap:30px;padding:10px 4% 50px}
+    .side,.card{background:#fff;border:1px solid var(--line);border-radius:17px;box-shadow:0 10px 24px #1a2b440d}.side{padding:18px;height:max-content;position:sticky;top:94px}
+    .side .heading{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:7px}.side .heading small{font-size:10px;color:#7b889c}
+    .side button{width:100%;text-align:left;padding:11px 12px;margin:3px 0;border:0;border-radius:9px;background:transparent;color:#172335;display:flex;justify-content:space-between;gap:8px}.side button:hover{background:#eef5ff}.side button.on{background:var(--blue);color:#fff}.count{font-size:11px;opacity:.78}
+    .shipping,.api{font-size:11px;color:#66758a;border:1px dashed #cbd7e6;padding:11px;border-radius:10px;margin-top:16px}.shipping strong,.api strong{display:block;color:#28364a;margin-bottom:3px}
+    .main h2{margin:4px 0 4px;font-size:34px}.sub{color:#77869a;font-size:13px}.eyebrow{color:var(--blue);font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:20px}.card{overflow:hidden;display:flex;flex-direction:column}
+    .pic{height:190px;background:linear-gradient(150deg,#f8fafc,#edf3fb);display:grid;place-items:center;padding:20px;position:relative}.pic img{max-width:100%;max-height:150px;object-fit:contain;mix-blend-mode:multiply}.fallback-icon{font-size:58px}
+    .stock{position:absolute;top:12px;right:12px;background:#ddf8e9;color:#087a42;border-radius:999px;padding:6px 8px;font-size:10px;font-weight:700}
+    .info{padding:17px;display:flex;flex-direction:column;flex:1}.cat{font-size:10px;color:var(--blue);text-transform:uppercase;font-weight:800}.info h3{font-size:15px;margin:7px 0}.info p{font-size:12px;color:#748398;line-height:1.45;min-height:52px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.rating{font-size:11px;color:#8b6900;margin:0 0 12px}.foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto}.foot button{border:0;background:var(--blue);color:#fff;padding:9px 11px;border-radius:8px;font-size:11px}
+    .loading,.empty{background:#fff;border:1px dashed #cbd7e6;border-radius:17px;padding:45px 20px;text-align:center;margin-top:20px;color:#66758a}.empty h3,.loading h3{color:#172335}
+    .spinner{width:30px;height:30px;border-radius:50%;border:3px solid #dce7f5;border-top-color:var(--blue);margin:0 auto 12px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+    .drawer{position:fixed;right:-430px;top:0;width:min(420px,92vw);height:100vh;background:#fff;z-index:50;box-shadow:-20px 0 50px #0b1a2b33;transition:right .25s ease;padding:20px;overflow:auto}.drawer.open{right:0}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}.drawer-head button{border:0;background:transparent;font-size:26px}.cart-line{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;padding:13px 0;border-bottom:1px solid #edf1f6}.cart-line img{width:48px;height:48px;object-fit:contain}.cart-line small{display:block;color:#738096;margin-top:3px}.remove{border:0;background:#f5f7fa;color:#a12f2f;border-radius:8px;padding:7px}.total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;padding:16px 0}.backdrop{position:fixed;inset:0;background:#0b172855;z-index:40;border:0;display:none}.backdrop.on{display:block}
+    footer{display:flex;justify-content:space-between;gap:10px;padding:24px 4%;border-top:1px solid var(--line);color:#6f7f94;font-size:12px;background:#fff}
+    @media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:800px){.head{flex-wrap:wrap;position:static}.brand{min-width:0}.search-wrap{order:3;flex-basis:100%}.hero{margin:12px;display:block;padding:28px}.hero h1{font-size:36px}.badge{display:none}.layout{grid-template-columns:1fr;padding:10px 12px}.side{position:static}.grid{grid-template-columns:1fr}.category-nav{display:flex;overflow:auto;gap:7px}.side button{min-width:max-content}.side .heading,.shipping,.api{display:none}}
+  </style>
+</head>
+<body>
+  <div class="strip"><b>MEGA SHOPPING SALE</b> &nbsp; Up to 60% off &nbsp; • &nbsp; Free shipping on orders over $50 &nbsp; • &nbsp; 14 days only</div>
+  <div class="head">
+    <button class="brand" id="brandBtn" type="button" aria-label="Show all products">
+      <span class="brand-mark">MI</span><span>Mohamad Ibrahim Store<small>API-powered shopping catalogue</small></span>
+    </button>
+    <div class="search-wrap"><input id="search" class="search" type="search" placeholder="Search API products..." autocomplete="off"><button id="clearSearch" class="clear" type="button" aria-label="Clear search">×</button></div>
+    <button id="cartButton" class="cart" type="button">🛒 Cart <b id="cartCount">0</b></button>
+  </div>
+
+  <section class="hero">
+    <div><small>MOHAMAD IBRAHIM STORE MEGA SHOPPING SALE</small><h1>Big savings. Fresh products. <span>Shop now.</span></h1><p>Discover electronics, fashion and jewelry from our live product API. Enjoy free shipping when your cart passes $50.</p><button id="shopNow" class="shop-now" type="button">Shop Now</button></div>
+    <div class="badge"><div>UP TO<br><b>60%</b><br>OFF</div></div>
+  </section>
+
+  <div class="layout">
+    <aside class="side">
+      <div class="heading"><b>Categories</b><small id="totalCount">0 API products</small></div>
+      <nav id="categoryNav" class="category-nav" aria-label="Product categories"></nav>
+      <div class="shipping"><strong>🚚 Free shipping</strong>On orders over $50</div>
+      <div class="api"><strong>● Live API catalogue</strong>fakestoreapi.com/products</div>
+    </aside>
+    <main class="main" id="productsSection">
+      <div class="eyebrow">Product catalogue</div><h2 id="pageTitle">All Products</h2><div id="resultText" class="sub">Loading products...</div>
+      <div id="loading" class="loading"><div class="spinner"></div><h3>Loading products from API...</h3><p>Fetching the latest catalogue from Fake Store API.</p></div>
+      <div id="grid" class="grid" hidden></div>
+      <div id="empty" class="empty" hidden><h3>No products found</h3><p>Try a different search term or select another category.</p><button id="showAll" class="shop-now" type="button">Show all products</button></div>
+    </main>
+  </div>
+
+  <aside id="drawer" class="drawer" aria-label="Cart summary"><div class="drawer-head"><div><small>Your cart</small><h3 id="drawerTitle">0 items</h3></div><button id="closeCart" type="button" aria-label="Close cart">×</button></div><div id="cartLines"></div><div id="cartTotal" class="total" hidden><span>Subtotal</span><span id="subtotal">$0.00</span></div></aside>
+  <button id="backdrop" class="backdrop" aria-label="Close cart"></button>
+  <footer><span>© 2026 Mohamad Ibrahim Store</span><span>SEO + Fake Store API + interactive campaign preview</span></footer>
+
+  <script>
+  (() => {
+    const API = 'https://fakestoreapi.com/products';
+    const fallbackProducts = [
+      {id:1,title:'Fjallraven Backpack',price:109.95,description:'Durable everyday backpack with multiple pockets and comfortable straps.',category:"men's clothing",image:'',rating:{rate:3.9,count:120}},
+      {id:2,title:'Premium Cotton T-Shirt',price:22.30,description:'Soft casual shirt designed for everyday comfort and easy styling.',category:"men's clothing",image:'',rating:{rate:4.1,count:259}},
+      {id:3,title:'Classic Gold Bracelet',price:168.00,description:'Elegant jewelry piece with a clean finish and timeless design.',category:'jewelery',image:'',rating:{rate:4.7,count:400}},
+      {id:4,title:'Portable SSD',price:64.00,description:'Fast compact storage for work, study and everyday file backups.',category:'electronics',image:'',rating:{rate:3.3,count:203}},
+      {id:5,title:'Gaming Monitor',price:599.00,description:'High-resolution display with sharp detail for work and entertainment.',category:'electronics',image:'',rating:{rate:4.6,count:250}},
+      {id:6,title:"Women's Casual Jacket",price:55.99,description:'Lightweight fashion layer designed for versatile everyday outfits.',category:"women's clothing",image:'',rating:{rate:4.4,count:150}},
+      {id:7,title:"Women's Snowboard Jacket",price:56.99,description:'Warm winter coat with a comfortable layered design.',category:"women's clothing",image:'',rating:{rate:4.8,count:235}},
+      {id:8,title:'SanDisk 1TB Internal SSD',price:109.00,description:'Fast internal solid-state drive for storage upgrades.',category:'electronics',image:'',rating:{rate:2.9,count:470}}
+    ];
+    const icons = {electronics:'💻',jewelery:'💍',"men's clothing":'👕',"women's clothing":'👗'};
+    const $ = s => document.querySelector(s);
+    const state = { products: [], category:'all', q:'', cart:[] };
+
+    function slug(v){ return String(v).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+    function label(v){ if(v==='all') return 'All Products'; return v.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' '); }
+    function money(v){ return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(Number(v)||0); }
+    function readUrl(){ const p=new URLSearchParams(location.search); state.category=p.get('category')||'all'; state.q=p.get('q')||''; $('#search').value=state.q; }
+    function writeUrl(){ const p=new URLSearchParams(); if(state.category!=='all') p.set('category',state.category); if(state.q.trim()) p.set('q',state.q.trim()); history.pushState({},'',location.pathname+(p.toString()?'?'+p.toString():'')); }
+    function categories(){ return [...new Set(state.products.map(p=>p.category))].sort((a,b)=>a.localeCompare(b)); }
+    function countFor(cat){ return cat==='all'?state.products.length:state.products.filter(p=>slug(p.category)===cat).length; }
+    function currentCategoryRaw(){ return categories().find(c=>slug(c)===state.category) || 'all'; }
+    function filtered(){ const q=state.q.trim().toLowerCase(); return state.products.filter(p => (state.category==='all'||slug(p.category)===state.category) && (!q || `${p.title} ${p.description} ${p.category}`.toLowerCase().includes(q))); }
+
+    function renderCategories(){
+      const items=[['all','All Products'],...categories().map(c=>[slug(c),label(c)])];
+      $('#categoryNav').innerHTML=items.map(([s,l])=>`<button type="button" data-category="${s}" class="${state.category===s?'on':''}"><span>${l}</span><span class="count">${countFor(s)}</span></button>`).join('');
+      $('#categoryNav').querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{state.category=btn.dataset.category;writeUrl();render();$('#productsSection').scrollIntoView({behavior:'smooth',block:'start'});}));
+    }
+
+    function renderProducts(){
+      const items=filtered(); const catRaw=currentCategoryRaw();
+      $('#pageTitle').textContent=state.category==='all'?'All Products':label(catRaw);
+      $('#resultText').textContent=`${items.length} ${items.length===1?'product':'products'} found${state.q.trim()?` for “${state.q.trim()}”`:''}`;
+      $('#totalCount').textContent=`${state.products.length} API products`;
+      $('#clearSearch').style.display=state.q?'block':'none';
+      $('#grid').hidden=items.length===0; $('#empty').hidden=items.length!==0;
+      $('#grid').innerHTML=items.map(p=>`<article class="card"><div class="pic">${p.image?`<img src="${p.image}" alt="${escapeHtml(p.title)}" loading="lazy">`:`<span class="fallback-icon">${icons[p.category]||'🛍️'}</span>`}<span class="stock">In Stock</span></div><div class="info"><div class="cat">${escapeHtml(p.category)}</div><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.description)}</p><div class="rating">★ ${(p.rating?.rate??4).toFixed(1)} <small>${p.rating?.count??0} reviews</small></div><div class="foot"><b>${money(p.price)}</b><button type="button" data-add="${p.id}">Add to cart</button></div></div></article>`).join('');
+      $('#grid').querySelectorAll('[data-add]').forEach(btn=>btn.addEventListener('click',()=>addToCart(Number(btn.dataset.add))));
+    }
+
+    function render(){ renderCategories(); renderProducts(); document.title=`${$('#pageTitle').textContent} | Mohamad Ibrahim Store`; }
+    function escapeHtml(s){ return String(s).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch])); }
+    function addToCart(id){ const p=state.products.find(x=>x.id===id); if(!p)return; state.cart.push(p); renderCart(); }
+    function renderCart(){ $('#cartCount').textContent=state.cart.length; $('#drawerTitle').textContent=`${state.cart.length} ${state.cart.length===1?'item':'items'}`; $('#cartLines').innerHTML=state.cart.length?state.cart.map((p,i)=>`<div class="cart-line">${p.image?`<img src="${p.image}" alt="">`:`<div>${icons[p.category]||'🛍️'}</div>`}<div><b>${escapeHtml(p.title)}</b><small>${money(p.price)}</small></div><button type="button" class="remove" data-remove="${i}">Remove</button></div>`).join(''):'<p style="color:#748398;padding:20px 0">Your cart is empty.</p>'; $('#cartLines').querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>{state.cart.splice(Number(b.dataset.remove),1);renderCart();})); const total=state.cart.reduce((s,p)=>s+Number(p.price),0); $('#subtotal').textContent=money(total); $('#cartTotal').hidden=!state.cart.length; }
+    function toggleCart(open){ $('#drawer').classList.toggle('open',open); $('#backdrop').classList.toggle('on',open); }
+    function resetAll(){ state.category='all';state.q='';$('#search').value='';writeUrl();render(); }
+
+    $('#search').addEventListener('input',e=>{state.q=e.target.value;writeUrl();renderProducts();});
+    $('#clearSearch').addEventListener('click',()=>{state.q='';$('#search').value='';writeUrl();renderProducts();});
+    $('#shopNow').addEventListener('click',()=>{resetAll();$('#productsSection').scrollIntoView({behavior:'smooth'});});
+    $('#showAll').addEventListener('click',resetAll); $('#brandBtn').addEventListener('click',resetAll);
+    $('#cartButton').addEventListener('click',()=>toggleCart(true)); $('#closeCart').addEventListener('click',()=>toggleCart(false)); $('#backdrop').addEventListener('click',()=>toggleCart(false));
+    addEventListener('popstate',()=>{readUrl();render();});
+
+    readUrl();
+    fetch(API,{headers:{Accept:'application/json'}}).then(r=>{if(!r.ok)throw new Error('API error');return r.json();}).then(products=>{state.products=Array.isArray(products)&&products.length?products:fallbackProducts;$('#loading').hidden=true;render();}).catch(()=>{state.products=fallbackProducts;$('#loading').hidden=true;render();});
+  })();
+  </script>
+</body>
+</html>
